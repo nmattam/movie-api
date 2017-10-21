@@ -62,7 +62,7 @@ def find_movies(movie_urls, SENDGRID_API_TOKEN)
       num_movies = num_movies + 1
     end
 
-    # Update the file with the latest file
+    # Update the file with the latest movie
     File.open(latest_movies_file, 'w') { |file| file.write(movies.first) } unless num_movies == 0
 
     if num_movies > 0
